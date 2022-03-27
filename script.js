@@ -11,7 +11,9 @@ function Converter() {
     var listaMedidas = document.getElementById("menu-Medidas")
     var medida = listaMedidas.options[listaMedidas.selectedIndex].value
 
-    if (medida == "m/s") {
+    if (medida == "option-nan") {
+        elementoResultado.innerHTML = "Olá, selecione uma medida de velocidade para continuar."
+    } else if (medida == "m/s") {
         elementoResultado.innerHTML = "Olá, o resultado de sua conversão foi de " + velocidadeMSArredondada + " Metros por Segundo."
     } else if (medida == "mph") {
         elementoResultado.innerHTML = "Olá, o resultado de sua conversão foi de " + velocidadeMPHArredondada + " Milhas por Hora."
